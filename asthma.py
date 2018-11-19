@@ -19,3 +19,5 @@ def noncritical():
 
 def emergencyvisit():
     tobring= input("what to bring to hospital")
+
+helper()
