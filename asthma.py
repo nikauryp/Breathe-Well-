@@ -10,7 +10,7 @@ def helper():
         return
     reply = input("Do they have an inhaler? (yes or no)")
     if (reply=='yes'):
-        print("Have them use the inhaler")
+        print("Have them use the inhaler.")
     else:
         print("sit up right and try to take deep breaths")
 
