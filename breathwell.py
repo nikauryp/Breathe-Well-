@@ -148,14 +148,51 @@ def review():
         return render_template("review.html")
 
 
+@app.route('/survey', methods=['GET','POST'])
+#@require_login
+def survey():
+    global reviews
+    global db
+    if request.method == 'POST':
+        breathe = request.form['breathe']
+        inhaler = request.form['inhaler']
+        comments = request.form['comments']
+        time = datetime.now()
+
+
+
+        review = {
+            'breathe':breathe=="yes",
+            'inhaler':inhaler=="yes",
+            'comments':comments,
+            'time':time.strftime("%H:%M %m/%d/%y")
+        }
+
+        # messages
+        reviews.insert(0, review) # add form object to the front of the list
+
+
+        return render_template("report.html",  result=review)
+    else:
+        return render_template("survey.html")
+
+
 @app.route('/show')
 #@require_login
 def show():
     return render_template('show.html',reviews=reviews)
 
-@app.route('/person1')
-def person1():
-    return render_template('person1.html')
+@app.route('/jackie')
+def jackie():
+    return render_template('jackie.html')
+
+@app.route('/nikky')
+def nikky():
+    return render_template('nikky.html')
+
+@app.route('/kimberly')
+def kimberly():
+    return render_template('kimberly.html')
 
 if __name__ == '__main__':
     app.run('127.0.0.1',port=5000)  # development
