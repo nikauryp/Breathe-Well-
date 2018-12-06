@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="bg-primary">Brandeis Dining Hall Reviews</h1>
+
+{% for result in reviews %}
+Report time: {{result.time}}
+<div class="bg-info">
+  Can they breathe:{{result.breathe}}
+  <br>
+  Do they have an inhaler: {{result.inhaler}}
+  <br>
+  Other Comments: <br>{{result.comments}}
+
+</div>
+
+<h2 class="bg-danger display-1">
+{% if result.breathe %}
+I am glad they can breathe!
+<br>
+  {%if result.inhaler %}
+      Have them use the inhaler,
+  {% else %}
+      sit up right and try to take deep breaths
+  {% endif %}
+{% else %}
+Call 911 immediately and get to a hospital
+{% endif %}
+</h2>
+<hr>
+<hr>
+{% endfor %}
+
+{% endblock %}

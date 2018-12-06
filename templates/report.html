@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="bg-primary">Survey Report</h1>
+
+<h1>Report time: {{result.time}}</h1>
+
+<div class="bg-info">
+  Can they breathe:{{result.breathe}}
+  <br>
+  Do they have an inhaler: {{result.inhaler}}
+  <br>
+  Other Comments: <br>{{result.comments}}
+
+</div>
+
+<h2 class="bg-danger">
+{% if result.breathe %}
+I am glad they can breathe!
+<br>
+  {%if result.inhaler %}
+      Have them use the inhaler,
+  {% else %}
+      sit up right and try to take deep breaths
+  {% endif %}
+{% else %}
+Call 911 immediately and get to a hospital
+{% endif %}
+</h2>
+<hr>
+
+
+{% endblock %}
