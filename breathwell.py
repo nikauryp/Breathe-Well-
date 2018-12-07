@@ -194,6 +194,10 @@ def nikky():
 def kimberly():
     return render_template('kimberly.html')
 
+@app.route('/julian')
+def julian():
+    return render_template('julian.html')
+
 if __name__ == '__main__':
     app.run('127.0.0.1',port=5000)  # development
     #app.run('0.0.0.0',port=5100)  # production
