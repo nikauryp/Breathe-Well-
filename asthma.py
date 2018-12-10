@@ -4,7 +4,7 @@ print("Asthma Crisis Helper")
 
 # ask questions and then give answers to user
 def helper():
-    reply = input("Can the person breathe at all? (yes or no)")
+    reply = input("Do you or your child have asthma?")
     if (reply == 'no'):
         print("Call 911 right away!")
         return
@@ -21,4 +21,3 @@ def emergencyvisit():
     tobring= input("what to bring to hospital")
 
 helper()
- 
