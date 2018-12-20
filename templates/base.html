@@ -22,19 +22,22 @@
 	      content="width=device-width, initial-scale=1">
 
 </head>
-<body>
+<body style="background-color: #FF5733;">
+  <br>
   <div class="container">
     <div class="text-center">
       <a class="btn btn-primary" href="/">Home</a>
       <a class="btn btn-primary" href="/team">Team</a>
-      <a class="btn btn-primary" href="/review">Emergency</a>
       <a class="btn btn-primary" href="/survey">Survey</a>
-      <a class="btn btn-primary" href="/logout">Logout</a>
+      <a class="btn btn-primary" href="/review">Emergency</a>
+      <!-- <a class="btn btn-primary" href="/logout">Logout</a> -->
 
     </div>
 
     <div id="content">{% block content %}{% endblock %}</div>
   </div>
+  <br>
+  <br>
 
 </body>
 </html>

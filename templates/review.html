@@ -2,28 +2,56 @@
 {% block content %}
 
 <div class="jumbotron">
-  <h1>Emergency?</h1>
+  <h1>Having an Emergency? Make a review.</h1>
     <p class="text-warning">
-      Make a review!
+    Important Message:
+    <p class="text-warning">
+
+    <img class = "img-square" width="250" src = "static/images/STOP.png">
+    <p class="text-warning">
+  *THIS IS NOT AN EMERGENCY FIRST RESPONSE WEB PAGE*
+    <p class="text-warning">
+    -IF THIS IS A REAL EMERGENCY, PLEASE EXIT AND CALL 911.
+    <img class = "img-square" width="250" src = "static/images/emergency.jpg">
+
     </p>
 </div>
 
 
-
 <form method="POST" action="/review" style="background-color: #e8e8e8; width: 50%; position: relative; border: 25px solid transparent; margin: auto; padding: 15px; text-align: center; border-radius: 10px;">
 
-  <h2>Can the person breath at all?</h2>
+  <h2>Is the person struggling with breathing?</h2>
   <select name='breathe'>
-    <option>yes</option>
-    <option>no</option>
+    <option>YES</option>
+    <option>NO</option>
+  </select>
+
+  <h2>Do you hear the person wheezing?</h2>
+  <select name='sound'>
+    <option>YES</option>
+    <option>NO</option>
   </select>
 
   <h2>Do they have an inhaler?</h2>
   <select name='inhaler'>
-    <option>yes</option>
-    <option>no</option>
+    <option>YES</option>
+    <option>NO</option>
   </select>
 
+  <h2>Do they know of any nearby hospitals?</h2>
+  <select name='hospital'>
+    <option>YES</option>
+    <option>NO</option>
+  </select>
+
+  <h2>Are you aware of what triggered the asthma attack?</h2>
+  <select name='breathe'>
+    <option>YES</option>
+    <option>NO</option>
+  </select>
+
+  <h2>If yes, what were those triggers?</h2>
+  <input type="text" name="where">
 
   <!-- class="text-center" -->
   <h2>Other comments:</h2>

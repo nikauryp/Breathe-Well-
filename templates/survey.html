@@ -2,30 +2,59 @@
 {% block content %}
 
 <div class="jumbotron">
-  <h1>Environment</h1>
+  <h1>Getting to Know Yourself and Your Enviroment.</h1>
     <p class="text-warning">
-      Make a review!
-    </p>
+      Please take this moment to answer a view questions!
 </div>
-
 
 
 <form method="POST" action="/review" style="background-color: #e8e8e8; width: 50%; position: relative; border: 25px solid transparent; margin: auto; padding: 15px; text-align: center; border-radius: 10px;">
 
-  <h2>Are you OK?</h2>
-  <select name='breathe'>
-    <option>yes</option>
-    <option>maybe</option>
-  </select>
-
   <h2>Where do you live?</h2>
   <input type="text" name="where">
 
+  <h2>Do you or your child have asthma?</h2>
+  <input type="text" name="where">
 
-  <h2>Do they have an inhaler?</h2>
-  <select name='inhaler'>
-    <option>yes</option>
-    <option>no</option>
+  <h2>If yes, have you always lived in your current location?</h2>
+  <input type="text" name="location">
+
+  <h2>If no, where did you live before?</h2>
+  <input type="text" name="location">
+
+  <h2>Do you recognize any green space or parks in your neighborhood?</h2>
+  <input type="text" name="where">
+
+
+  <h2>Is there more or less green space in your neighborhood?</h2>
+  <input type="text" name="activity" >
+
+  <h2>If you or your child have asthma, how long has it been since you last had any symptoms of asthma?</h2>
+  <select name='activity'>
+    <option>Never</option>
+    <option>Recent - 24 Hours</option>
+    <option>Past Week</option>
+    <option>Past Month</option>
+    <option>3 Months Ago</option>
+    <option>6 Months Ago</option>
+    <option> More than a year</option>
+    <option> 5 years+</option>
+  </select>
+
+  <h2>Do you or your kids spend time outdoors in your neighborhood?</h2>
+  <select name='activity'>
+    <option>YES</option>
+    <option>NO</option>
+  </select>
+
+  <h2>Are you familiar with any forms of transportation that can contribute to pollution in your neighborhood?</h2>
+  <select name='activity'>
+    <option>None</option>
+    <option>Buses</option>
+    <option>Train's</option>
+    <option>Car's</option>
+    <option>Buses and Trains</option>
+
   </select>
 
 
